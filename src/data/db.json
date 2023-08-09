@@ -24,6 +24,11 @@
       "name": "videogame",
       "price": "80.80",
       "id": 5
+    },
+    {
+      "name": "mouse",
+      "price": "19.90",
+      "id": 6
     }
   ]
 }
