@@ -17,7 +17,7 @@ function App() {
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
-
+  const [remove, setRemove] = useState("");
   // 1 - resgatando dados
   // useEffect(() => {
 
@@ -39,6 +39,10 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    
+
+    console.log("event: ", e);
+
     const product = {
       name,
       price,
@@ -58,11 +62,15 @@ function App() {
   // setProducts((prevProducts) => [...prevProducts, addedProduct]);
 
   //5 refatoranto post
-
   httpConfig(product, "POST");
   setName("");
   setPrice("");
 
+  }
+
+  const handleRemove = async (id) => {
+    httpConfig(id, "DELETE");
+  
   }
 
   return (
@@ -76,6 +84,7 @@ function App() {
               {items && items.map((product) => (
                 <li key={product.id}>
                   {product.name} - R$: {product.price}
+                  <button onClick={() => handleRemove(product.id)} >Excluir</button>
                 </li>
               ))}
             </ul>
@@ -93,6 +102,7 @@ function App() {
             {/*7 - state de loading no post */}
             {loading &&(<input type="submit" disabled value="criar" />)}
             {!loading &&(<input type="submit" value="criar" />)}
+            
           </form>
       </div>
     </div>

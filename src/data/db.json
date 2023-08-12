@@ -49,6 +49,11 @@
       "name": "pendrive",
       "price": "7",
       "id": 12
+    },
+    {
+      "name": "teste",
+      "price": "40",
+      "id": 36
     }
   ]
 }
