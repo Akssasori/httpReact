@@ -29,6 +29,16 @@
       "name": "mouse",
       "price": "19.90",
       "id": 6
+    },
+    {
+      "name": "cadeira",
+      "price": "799.90",
+      "id": 7
+    },
+    {
+      "name": "mesa",
+      "price": "89.90",
+      "id": 8
     }
   ]
 }
